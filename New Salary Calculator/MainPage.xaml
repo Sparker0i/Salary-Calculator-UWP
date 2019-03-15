@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
-        <TextBlock HorizontalAlignment="Left" Text="Hello World" FontSize="36"/>
-        <TextBlock Text="Let's Enter Some Basic Details" Margin="0,20,0,0"/>
-        <StackPanel x:Name="basicPanel" Orientation="Horizontal" Margin="0,1,0,20">
+        <TextBlock HorizontalAlignment="Left" Text="Finance Calculator" FontSize="36"/>
+        <TextBlock Text="When you're lazy enough to do your finances, you let this app do your job. Now let's Enter Some Basic Details" Margin="0,20,0,0"/>
+        <StackPanel x:Name="basicPanel" Orientation="Horizontal" Margin="0,4,0,20">
             <StackPanel x:Name="inputNamePanel" Orientation="Vertical">
                 <TextBlock Text="What's your name?"/>
                 <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
@@ -19,12 +19,12 @@
             <TextBlock Width="100"/>
             <StackPanel x:Name="inputPanel" Orientation="Vertical">
                 <TextBlock Text="What's your Basic Pay?"/>
-                <TextBox x:Name="basicInput" Width="300" HorizontalAlignment="Left" TextChanging="TextBox_OnTextChanging"/>
+                <TextBox x:Name="basicInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
             <TextBlock Width="100"/>
             <StackPanel x:Name="yearPanel" Orientation="Vertical">
                 <TextBlock Text="For which year?"/>
-                <TextBox x:Name="yearInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="yearInput" Width="300" HorizontalAlignment="Left" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
         </StackPanel>
 
@@ -32,17 +32,17 @@
         <StackPanel x:Name="percentInputPanel" Orientation="Horizontal" Margin="0,1,0,20">
             <StackPanel x:Name="fbpInputPanel" Orientation="Vertical">
                 <TextBlock Text="FBP"/>
-                <TextBox x:Name="fbpInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="fbpInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
             <TextBlock Width="100"/>
             <StackPanel x:Name="pfInputPanel" Orientation="Vertical">
                 <TextBlock Text="PF"/>
-                <TextBox x:Name="pfInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="pfInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
             <TextBlock Width="100"/>
             <StackPanel x:Name="gratInputPanel" Orientation="Vertical">
                 <TextBlock Text="Gratuity"/>
-                <TextBox x:Name="gratInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="gratInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
         </StackPanel>
 
@@ -51,20 +51,20 @@
 
             <StackPanel x:Name="rentInputPanel" Orientation="Vertical">
                 <TextBlock Text="Rent"/>
-                <TextBox x:Name="rentInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="rentInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
             <TextBlock Width="100"/>
             <StackPanel x:Name="foodInputPanel" Orientation="Vertical">
                 <TextBlock Text="Food"/>
-                <TextBox x:Name="foodInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="foodInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
             <TextBlock Width="100"/>
             <StackPanel x:Name="investmentsInputPanel" Orientation="Vertical">
                 <TextBlock Text="Investments"/>
-                <TextBox x:Name="investmentsInput" Width="300" HorizontalAlignment="Left"/>
+                <TextBox x:Name="investmentsInput" Width="300" HorizontalAlignment="Left" InputScope="Number" TextChanging="TextBox_OnTextChanging"/>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Center" Click="calculate_button_click"/>
+        <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Center" Click="calculate_click"/>
 
         <StackPanel x:Name="outputPanel" Orientation="Horizontal" Margin="0,20,0,10">
             <StackPanel x:Name="arsPanel" Orientation="Vertical">
