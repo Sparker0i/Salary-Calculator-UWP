@@ -17,5 +17,7 @@ namespace Salary_Calculator
 	public:
 		MainPage();
 
+	private:
+		void TextBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
 	};
 }

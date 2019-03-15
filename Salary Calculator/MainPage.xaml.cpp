@@ -25,3 +25,9 @@ MainPage::MainPage()
 {
 	InitializeComponent();
 }
+
+
+void Salary_Calculator::MainPage::TextBox_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e)
+{
+
+}

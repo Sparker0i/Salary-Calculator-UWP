@@ -6,13 +6,58 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    ScrollViewer.IsVerticalRailEnabled="True"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
         <TextBlock HorizontalAlignment="Left" Text="Hello World" FontSize="36"/>
-        <TextBlock Text="What's your name?"/>
-        <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-            <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
+        <TextBlock Text="Let's Enter Some Basic Details" Margin="0,20,0,0"/>
+        <StackPanel x:Name="basicPanel" Orientation="Horizontal" Margin="0,1,0,20">
+            <StackPanel x:Name="inputNamePanel" Orientation="Vertical">
+                <TextBlock Text="What's your name?"/>
+                <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <TextBlock Width="100"/>
+            <StackPanel x:Name="inputPanel" Orientation="Vertical">
+                <TextBlock Text="What's your Basic Pay?"/>
+                <TextBox x:Name="basicInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Text="What's the % over Basic that goes to?"/>
+        <StackPanel x:Name="percentInputPanel" Orientation="Horizontal" Margin="0,1,0,20">
+            <StackPanel x:Name="fbpInputPanel" Orientation="Vertical">
+                <TextBlock Text="FBP"/>
+                <TextBox x:Name="fbpInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <TextBlock Width="100"/>
+            <StackPanel x:Name="pfInputPanel" Orientation="Vertical">
+                <TextBlock Text="PF"/>
+                <TextBox x:Name="pfInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <TextBlock Width="100"/>
+            <StackPanel x:Name="gratInputPanel" Orientation="Vertical">
+                <TextBlock Text="Gratuity"/>
+                <TextBox x:Name="gratInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Text="Enter your expenses here"/>
+        <StackPanel x:Name="expensesInputPanel" Orientation="Horizontal" Margin="0,1,0,20">
+            
+            <StackPanel x:Name="rentInputPanel" Orientation="Vertical">
+                <TextBlock Text="Rent"/>
+                <TextBox x:Name="rentInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <TextBlock Width="100"/>
+            <StackPanel x:Name="foodInputPanel" Orientation="Vertical">
+                <TextBlock Text="Food"/>
+                <TextBox x:Name="foodInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <TextBlock Width="100"/>
+            <StackPanel x:Name="investmentsInputPanel" Orientation="Vertical">
+                <TextBlock Text="Investments"/>
+                <TextBox x:Name="investmentsInput" Width="300" HorizontalAlignment="Left"/>
+            </StackPanel>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
