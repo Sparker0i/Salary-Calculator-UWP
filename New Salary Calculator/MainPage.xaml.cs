@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Collections.ObjectModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -14,6 +15,47 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+
+namespace Sample.Data
+{
+    class TableFiller : ObservableCollection<TableData>
+    {
+        public TableFiller()
+        {
+            this.Add(new TableData()
+            {
+                UserName = "user1",
+                FirstName = "FN1",
+                LastName = "LN1",
+                Email = "user1@nowhere.local"
+            });
+
+            this.Add(new TableData()
+            {
+                UserName = "user2",
+                FirstName = "FN2",
+                LastName = "LN2",
+                Email = "user2@nowhere.local"
+            });
+
+            this.Add(new TableData()
+            {
+                UserName = "user3",
+                FirstName = "FN3",
+                LastName = "LN3",
+                Email = "user3@nowhere.local"
+            });
+        }
+    }
+
+    class TableData
+    {
+        public string UserName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
+}
 
 namespace New_Salary_Calculator
 {
